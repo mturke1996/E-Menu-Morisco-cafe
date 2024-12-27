@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>موريسكو كافيه - Morisco Café</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+  <!-- شريط التنقل -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand text-primary fw-bold" href="#">
+        موريسكو كافيه
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="#about">عن الكافيه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="#menu">القائمة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="#contact">تواصل معنا</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- قسم الهيرو -->
+  <section class="hero text-center text-white">
+    <div class="container">
+      <h1 class="hero-title">مرحبًا بكم في موريسكو كافيه</h1>
+      <p class="hero-description">نكهات لا تُنسى وأجواء لا مثيل لها.</p>
+      <a href="#menu" class="btn btn-light btn-lg mt-3">اكتشف قائمتنا</a>
+    </div>
+  </section>
+
+<!-- قسم حولنا -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-5">عن موريسكو كافيه</h2>
+    <div class="row align-items-center">
+      <!-- صورة الكافيه -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="images/DSC05754.png" class="img-fluid rounded-3 shadow-lg" alt="صورة الكافيه" />
+      </div>
+      <!-- نص حول الكافيه -->
+      <div class="col-md-6">
+        <p class="fs-5 text-muted mb-4">
+          موريسكو كافيه هو المكان المثالي لعشاق القهوة والمأكولات الشهية. نحن نقدم تجربة استثنائية تجمع بين أجواء راقية ونكهات فريدة، مما يجعل كل زيارة لحظات لا تُنسى.
+        </p>
+        <p class="fs-5 text-muted mb-4">
+          سواء كنت تبحث عن فطور صباحي لذيذ، كريبات مميزة، أو حلويات شهية، فإننا نضمن لك استخدام أفضل المكونات الطازجة والاهتمام بأدق التفاصيل.
+        </p>
+        <p class="fs-5 text-muted">
+          ندعوك لاكتشاف تجربة فريدة حيث تتناغم جودة الخدمة مع روعة المكان لتقديم أفضل ما لدينا.
+        </p>
+
+        <!-- أيقونات التواصل الاجتماعي -->
+        <div class="text-center mt-5">
+          <p class="fs-4 text-muted mb-3">تابعنا على وسائل التواصل:</p>
+          <div class="d-flex justify-content-center gap-4">
+            <a href="https://www.facebook.com/" target="_blank" class="social-icon bg-primary text-white d-flex align-items-center justify-content-center">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon bg-danger text-white d-flex align-items-center justify-content-center">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="social-icon bg-info text-white d-flex align-items-center justify-content-center">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- قسم القائمة -->
+    <section id="menu" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center text-primary mb-5">قائمة الطعام</h2>
+    
+        <!-- شريط التصنيفات -->
+        <div class="menu-categories-container" style="position: relative; overflow-x: auto; white-space: nowrap; scroll-snap-type: x mandatory;">
+          <!-- زر الكل -->
+          <button class="menu-category active" onclick="showAllCategories()">الكل</button>
+    
+          <!-- التصنيفات -->
+          <button class="menu-category" data-target="#hot-drinks">مشروبات ساخنة</button>
+          <button class="menu-category" data-target="#cold-drinks">مشروبات باردة</button>
+          <button class="menu-category" data-target="#juices">عصائر طبيعية</button>
+          <button class="menu-category" data-target="#cocktails">كوكتيلات</button>
+          <button class="menu-category" data-target="#froopy">فروبي</button>
+          <button class="menu-category" data-target="#milkshakes">ميلك شيك</button>
+          <button class="menu-category" data-target="#smoothies">سموثي</button>
+          <button class="menu-category" data-target="#mojito">موهيتو</button>
+          <button class="menu-category" data-target="#yogurt-parfait">ياغورت بارفي</button>
+          <button class="menu-category" data-target="#ice-cream">ايس كريم</button>
+          <button class="menu-category" data-target="#crepes">كريب</button>
+          <button class="menu-category" data-target="#croissant">كروسون</button>
+          <button class="menu-category" data-target="#mini-cupcake">ميني بن كيك</button>
+          <button class="menu-category" data-target="#waffle">وافل</button>
+          <button class="menu-category" data-target="#cakes">كيكات</button>
+          <button class="menu-category" data-target="#breakfast">فطور صباحي</button>
+          <button class="menu-category" data-target="#pizza">بيتزا</button>
+          <button class="menu-category" data-target="#pastries">معجنات</button>
+          <button class="menu-category" data-target="#dried-snacks">نواشف</button>
+        </div>
+      </div>
+    </section>
+    
+            <!-- محتوى التبويبات -->
+            <div class="tab-content">
+              <!-- قسم الفطور -->
+              <div class="tab-pane fade show " id="breakfast">
+                <div class="row g-4">
+                  <div class="col-md-3">
+                    <div class="card menu-card">
+                      <img
+                        src="images/breakfast1.jpg"
+                        class="card-img-top"
+                        alt="ساندويتش جبنة"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">ساندويتش جبنة</h5>
+                        <p class="card-text">جبنة طازجة مع خبز محمص.</p>
+                        <p class="price">السعر: 25 ريال</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card menu-card">
+                      <img
+                        src="images/breakfast2.jpg"
+                        class="card-img-top"
+                        alt="بيض مع توست"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">بيض مع توست</h5>
+                        <p class="card-text">وجبة غنية بالطاقة.</p>
+                        <p class="price">السعر: 30 ريال</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card menu-card">
+                      <img
+                        src="images/pancake.jpg"
+                        class="card-img-top"
+                        alt="بان كيك"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">بان كيك</h5>
+                        <p class="card-text">محلى بشراب القيقب.</p>
+                        <p class="price">السعر: 35 ريال</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card menu-card">
+                      <img
+                        src="images/omelette.jpg"
+                        class="card-img-top"
+                        alt="أومليت"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">أومليت</h5>
+                        <p class="card-text">أومليت بالخضار الطازجة.</p>
+                        <p class="price">السعر: 28 ريال</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- قسم العصائر -->
+              <div class="tab-pane fade" id="juices">
+                <div class="row g-4">
+                  <div class="col-md-3">
+                    <div class="card menu-card">
+                      <img
+                        src="images/orange-mango.jpg"
+                        class="card-img-top"
+                        alt="عصير برتقال ومانجو"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">عصير برتقال ومانجو</h5>
+                        <p class="card-text">عصير طبيعي 100%.</p>
+                        <p class="price">السعر: 15 ريال</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card menu-card">
+                      <img
+                        src="images/sweetbere.jpg"
+                        class="card-img-top"
+                        alt="عصير فراولة"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">عصير فراولة</h5>
+                        <p class="card-text">من الفراولة الطازجة.</p>
+                        <p class="price">السعر: 18 ريال</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card menu-card">
+                      <img
+                        src="images/cocktel.jpg"
+                        class="card-img-top"
+                        alt="عصير مشكل"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">عصير مشكل</h5>
+                        <p class="card-text">مزيج منعش من الفواكه.</p>
+                        <p class="price">السعر: 22 ريال</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- قسم الكريبات -->
+              <div class="tab-pane fade" id="crepes">
+                <div class="row g-4">
+                  <div class="col-md-3">
+                    <div class="card menu-card">
+                      <img
+                        src="images/crepe1.jpg"
+                        class="card-img-top"
+                        alt="كريب نوتيلا"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">كريب نوتيلا</h5>
+                        <p class="card-text">كريب محشي نوتيلا مع المكسرات.</p>
+                        <p class="price">السعر: 25 ريال</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card menu-card">
+                      <img
+                        src="images/crepe2.jpg"
+                        class="card-img-top"
+                        alt="كريب بالفواكه"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">كريب بالفواكه</h5>
+                        <p class="card-text">كريب مشبع بالفواكه الطازجة.</p>
+                        <p class="price">السعر: 28 ريال</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- قسم الكيكات -->
+              <div class="tab-pane fade" id="cakes">
+                <div class="row g-4">
+                  <div class="col-md-3">
+                    <div class="card menu-card">
+                      <img
+                        src="images/cake1.jpg"
+                        class="card-img-top"
+                        alt="كيكة شوكولاتة"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">كيكة شوكولاتة</h5>
+                        <p class="card-text">كيكة شوكولاتة غنية ولذيذة.</p>
+                        <p class="price">السعر: 40 ريال</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card menu-card">
+                      <img
+                        src="images/cake2.jpg"
+                        class="card-img-top"
+                        alt="كيكة ليمون"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">كيكة ليمون</h5>
+                        <p class="card-text">كيكة ليمون ناعمة ولذيذة.</p>
+                        <p class="price">السعر: 35 ريال</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+<!-- قسم التواصل معنا -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-5">تواصل معنا</h2>
+    <div class="row g-5">
+      <!-- نموذج التواصل -->
+      <div class="col-md-6">
+        <form id="contactForm">
+          <div class="mb-4">
+            <label for="name" class="form-label">الاسم</label>
+            <input type="text" name="name" class="form-control rounded-pill shadow-sm" id="name" required placeholder="أدخل اسمك" />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="form-label">البريد الإلكتروني</label>
+            <input type="email" name="email" class="form-control rounded-pill shadow-sm" id="email" required placeholder="example@domain.com" />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="form-label">رسالتك</label>
+            <textarea name="message" class="form-control shadow-sm" id="message" rows="5" required placeholder="أدخل رسالتك هنا"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 py-2 rounded-pill shadow-lg">إرسال</button>
+        </form>
+        <!-- رسالة الحالة -->
+        <div id="formStatus" class="text-center mt-4"></div>
+      </div>
+
+      <!-- معلومات التواصل -->
+      <div class="col-md-6">
+        <div class="bg-white p-4 rounded-3 shadow-sm h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h5 class="fw-bold text-primary">عنواننا</h5>
+            <p>تاجوراء طريق الشط جزيرة دوران الأندلسي, Tripoli, Libya</p>
+            <h5 class="fw-bold text-primary">الهاتف</h5>
+            <p>0912502622</p>
+            <h5 class="fw-bold text-primary">البريد الإلكتروني</h5>
+            <p>info@moriscocafe.com</p>
+          </div>
+          <div class="text-center mt-4">
+            <p class="text-muted fs-5 mb-2">تابعنا على وسائل التواصل:</p>
+            <div class="d-flex justify-content-center gap-3">
+              <a href="https://www.facebook.com/" target="_blank" class="social-icon bg-primary text-white d-flex align-items-center justify-content-center">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" class="social-icon bg-danger text-white d-flex align-items-center justify-content-center">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank" class="social-icon bg-info text-white d-flex align-items-center justify-content-center">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- شريط التذييل -->
+<footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <!-- معلومات الكافيه -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold text-warning">موريسكو كافيه</h5>
+        <p class="text-muted">
+          العنوان: شارع النخيل، المدينة المنورة، المملكة العربية السعودية
+        </p>
+        <p class="text-muted">
+          الهاتف: <a href="tel:+9661234567890" class="text-white text-decoration-none">+966-123-456-7890</a>
+        </p>
+        <p class="text-muted">
+          البريد الإلكتروني: <a href="mailto:info@moriscocafe.com" class="text-white text-decoration-none">info@moriscocafe.com</a>
+        </p>
+      </div>
+
+      <!-- وسائل التواصل الاجتماعي -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold text-warning">تابعنا على</h5>
+        <div class="d-flex justify-content-center justify-content-md-start gap-3">
+          <a href="#" class="text-white fs-4"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-white fs-4"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white fs-4"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white fs-4"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- المصمم -->
+    </div>
+
+    <!-- خط فاصل وحقوق النشر -->
+    <hr class="my-4 text-white opacity-25">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2024 موريسكو كافيه - جميع الحقوق محفوظة.</p>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>

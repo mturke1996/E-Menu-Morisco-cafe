@@ -1,0 +1,174 @@
+/* قسم الهيرو */
+.hero {
+  background: url("../images/moresko.jpg") center/cover no-repeat;
+  padding: 150px 0;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* تصميم الحاوية للتصنيفات */
+.menu-categories-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.menu-category {
+  flex-shrink: 0;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.menu-category.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.show.active {
+  display: block;
+}
+
+.menu-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.menu-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.menu-card .card-body {
+  text-align: center;
+  padding: 15px;
+}
+
+.menu-card .price {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* تحسين التصميم لكل الشاشات */
+@media (max-width: 768px) {
+  .menu-categories-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 0;
+  }
+
+  .menu-category {
+      flex-shrink: 0;
+      padding: 8px 10px;
+      font-size: 12px;
+  }
+
+  .tab-pane .row {
+      display: grid;
+      grid-template-columns: 1fr; /* عمود واحد على الهواتف */
+      gap: 15px;
+  }
+
+  .menu-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      width: 100%; /* لتكون أفقي على الهواتف */
+  }
+
+  .menu-card img {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .menu-card .card-body {
+      padding: 10px;
+  }
+
+  .menu-card .card-title {
+      font-size: 14px;
+  }
+
+  .menu-card .card-text {
+      font-size: 12px;
+  }
+
+  .menu-card .price {
+      font-size: 14px;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-categories-container {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      gap: 15px;
+      overflow-x: auto;
+  }
+
+  .menu-category {
+      padding: 12px 20px;
+      font-size: 14px;
+  }
+
+  .tab-pane .row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* عرض مرن للبطاقات */
+      gap: 20px;
+  }
+
+  .menu-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      width: calc(33.33% - 20px); /* لجعل البطاقات طوليّة بشكل جميل على الكمبيوتر */
+  }
+
+  .menu-card img {
+      width: 100%;
+      height: auto;
+  }
+
+  .menu-card .card-body {
+      padding: 20px;
+  }
+
+  .menu-card .card-title {
+      font-size: 16px;
+  }
+
+  .menu-card .card-text {
+      font-size: 14px;
+  }
+
+  .menu-card .price {
+      font-size: 16px;
+  }
+}
